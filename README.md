@@ -11,15 +11,38 @@ Live preview [link](https://isaacpitwa.github.io/leaderboard/)
 ## Built With
 
 - HTML & CSS
+- Webpack
+- Javascript
 - GitFlow
 - Linters
 - Documented Work
 
 
+## Development set up
+Clone Repository  using 
+`git@github.com:isaacpitwa/leaderboard.git` 
 
-## Authors
+OR  using HTTPS
 
-👤 **Author1**
+`https://github.com/isaacpitwa/leaderboard.git` 
+
+move into project directory
+`cd leaderboard`
+
+Install  Project dependancies using `NPM`
+
+`npm install`
+
+Install  Project dependancies using   `Yarn`
+
+`yarn install`
+
+launch project locally with 
+
+`npm start` or `yarn start`
+
+
+## 👤 **Author**
 
 - GitHub: [@isaacpitwa](https://github.com/isaacpitwa)
 - Twitter: [@isaacpitwa](https://twitter.com/isaacpitwa)
