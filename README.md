@@ -7,7 +7,7 @@
 
 ## Live preview
 
-Live preview [link](https://isaacpitwa.github.io/my-portfolio/)
+Live preview [link](https://isaacpitwa.github.io/leaderboard/)
 
 ## Built With
 
