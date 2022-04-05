@@ -1,11 +1,12 @@
 import './style.css';
+import { ScoresComponent, AddScoreComponent } from './components/index.js';
+
 function component() {
-    const element = document.createElement('div');
-  
-    element.innerHTML = "Hello Webpack";
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
-  
+  const container = document.createElement('div');
+  container.classList.add('container');
+  container.appendChild(ScoresComponent());
+  container.appendChild(AddScoreComponent());
+  return container;
+}
+
+document.body.appendChild(component());

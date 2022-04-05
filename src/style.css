@@ -1,3 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
 body {
-  background-color: bisque;
+  background-color: #f6f6f6;
+  font-family: Poppins, sans-serif;
+  width: 80%;
+  margin: 5% auto;
+}
+
+button,
+input {
+  font-family: Poppins, sans-serif;
+}
+
+h4 {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.container .scores {
+  width: 50%;
+}
+
+.scores .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scores .scores-list {
+  border: 1px solid black;
+  list-style: none;
+  padding-left: 0;
+  border-radius: 4px;
+}
+
+.scores-list .score {
+  padding: 8px 16px;
+}
+
+.score:nth-child(even) {
+  background-color: #ddd;
+}
+
+.container form {
+  padding: 0 2%;
+}
+
+.container form input {
+  width: 95%;
+  height: 32px;
+  padding: 4px 8px;
+  margin: 8px 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.container form button {
+  float: right;
 }
