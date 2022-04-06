@@ -8,6 +8,10 @@ export default () => {
   headingText.innerText = 'Add your score';
   form.appendChild(headingText);
 
+  const feedback = document.createElement('div');
+  feedback.classList.add('feedback');
+  form.appendChild(feedback);
+
   const nameInput = document.createElement('input');
   nameInput.type = 'text';
   nameInput.placeholder = 'Your name';
@@ -32,12 +36,18 @@ export default () => {
   form.onsubmit = (event) => {
     event.preventDefault();
     const score = new Score({ player: nameInput.value, score: scoreInput.value });
+    feedback.classList.remove('success');
+    feedback.classList.remove('danger');
+    feedback.innerText = '';
     ApiClient.addScore(score.tojson()).then(
-      () => {
+      (response) => {
+        feedback.classList.add('success');
+        feedback.innerText = `${response.result} Refresh list for updates`;
         form.reset();
       },
-      () => {
-
+      (error) => {
+        feedback.classList.add('danger');
+        feedback.innerText = error;
       },
     );
   };
