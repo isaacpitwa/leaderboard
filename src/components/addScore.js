@@ -1,5 +1,5 @@
 import ApiClient from '../data/api_client.js';
-import { Score } from '../data/models';
+import { Score } from '../data/models/index.js';
 
 export default () => {
   const form = document.createElement('form');
@@ -36,8 +36,8 @@ export default () => {
       () => {
         form.reset();
       },
-      (error) => {
-        console.log(`[NEGATIVE]- Reponse Data  FAiled ${error}`);
+      () => {
+
       },
     );
   };
