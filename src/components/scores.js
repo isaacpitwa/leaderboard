@@ -25,7 +25,7 @@ export default () => {
   ApiClient.getScores().then(
     (scores) => {
       scoreList.innerHTML = '';
-      scores.result.forEach((score) => {
+      scores.result.reverse().forEach((score) => {
         scoreList.innerHTML += `<li class="score"> ${score.user}: ${score.score}</li>`;
       });
     },
