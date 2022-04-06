@@ -1,3 +1,5 @@
+import ApiClient from '../data/api_client.js';
+
 export default () => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('scores');
@@ -14,15 +16,22 @@ export default () => {
   refreshBtn.classList.add('btn-refresh');
   refreshBtn.innerText = 'Refresh';
   heading.appendChild(refreshBtn);
+  refreshBtn.onclick = () => { window.location.reload(); };
 
   const scoreList = document.createElement('ul');
   scoreList.classList.add('scores-list');
-  scoreList.innerHTML = `<li class="score"> Name: 100</li>
-                        <li class="score"> Name: 100</li>
-                        <li class="score"> Name: 100</li>
-                        <li class="score"> Name: 100</li>
-                        <li class="score"> Name: 100</li>`;
   wrapper.appendChild(heading);
+  scoreList.innerHTML = 'Loading...';
+  ApiClient.getScores().then(
+    (scores) => {
+      scoreList.innerHTML = '';
+      scores.result.reverse().forEach((score) => {
+        scoreList.innerHTML += `<li class="score"> ${score.user}: ${score.score}</li>`;
+      });
+    },
+  ).catch(() => {
+    scoreList.innerHTML = ' Error Loading ';
+  });
   wrapper.appendChild(scoreList);
   return wrapper;
 };
