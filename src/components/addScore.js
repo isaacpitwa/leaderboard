@@ -33,13 +33,8 @@ export default () => {
     event.preventDefault();
     const score = new Score({ player: nameInput.value, score: scoreInput.value });
     ApiClient.addScore(score.tojson()).then(
-      (res) => {
-        if (res.status) {
-          console.log(`[POSITIVE]- Reponse Data ${res.data}`);
-          form.reset();
-        } else {
-          console.log(`[NEGATIVE]- Reponse Data ${res.data}`);
-        }
+      () => {
+        form.reset();
       },
       (error) => {
         console.log(`[NEGATIVE]- Reponse Data  FAiled ${error}`);
