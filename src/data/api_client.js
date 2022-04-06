@@ -1,8 +1,8 @@
-const SCORE_URI = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/DWvyid6hBXKd4NqI0fDB/scores/';
+import { Constants } from './models/index.js';
 
 export default class ApiClient {
     static addScore = async (score) => {
-      const response = await fetch(SCORE_URI, {
+      const response = await fetch(Constants.SCORE_URI, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -14,7 +14,7 @@ export default class ApiClient {
     };
 
     static getScores = async () => {
-      const response = await fetch(SCORE_URI, {
+      const response = await fetch(Constants.SCORE_URI, {
         method: 'GET',
         headers: {
           Accept: 'application/json',
