@@ -42,7 +42,7 @@ export default () => {
     ApiClient.addScore(score.tojson()).then(
       (response) => {
         feedback.classList.add('success');
-        feedback.innerText = `${response.result} Refresh list for updates`;
+        feedback.innerText = `${response.result} \nRefresh list for updates`;
         form.reset();
       },
       (error) => {
