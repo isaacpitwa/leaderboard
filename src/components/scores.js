@@ -18,7 +18,8 @@ export default () => {
   const refreshBtn = document.createElement('button');
   refreshBtn.type = 'button';
   refreshBtn.classList.add('btn-refresh');
-  refreshBtn.innerText = 'Refresh';
+  refreshBtn.innerHTML = '<i class="fa fa-refresh"></i>';
+  refreshBtn.innerHTML += ' Refresh';
   heading.appendChild(refreshBtn);
   refreshBtn.onclick = () => { window.location.reload(); };
 
