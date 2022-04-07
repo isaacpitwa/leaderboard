@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 body {
-  background-color: #f6f6f6;
   font-family: Poppins, sans-serif;
   width: 80%;
   margin: 5% auto;
@@ -33,7 +32,7 @@ h4 {
 }
 
 .scores .scores-list {
-  border: 1px solid black;
+  border: 2px solid #f4f4f4;
   list-style: none;
   padding-left: 0;
   border-radius: 4px;
@@ -41,10 +40,14 @@ h4 {
 
 .scores-list .score {
   padding: 8px 16px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .score:nth-child(even) {
-  background-color: #ddd;
+  background-color: #f4f4f4;
 }
 
 .container form {
@@ -56,10 +59,26 @@ h4 {
   height: 32px;
   padding: 4px 8px;
   margin: 8px 0;
+  border: 1px solid #f4f4f4;
+  border-radius: 2px;
+  background-color: #f4f4f4;
+}
+
+button {
+  background-color: #f4f4f4;
+  border: 0;
+  border-radius: 2px;
+  padding: 4px 10px;
 }
 
 button:hover {
   cursor: pointer;
+}
+
+.pagination button {
+  margin: 0 4px;
+  padding: 4px 10px;
+  background-color: #f4f4f4;
 }
 
 .container form button {
@@ -71,7 +90,7 @@ button:hover {
   padding: 8px;
   color: #ddd;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -81,4 +100,9 @@ button:hover {
 
 .success {
   background-color: green;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
 }
