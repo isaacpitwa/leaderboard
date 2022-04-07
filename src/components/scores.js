@@ -77,6 +77,7 @@ export default () => {
         pageBtn.onclick = () => {
           scoresToshow = paginationList[index];
           indexShowing = index;
+          pageBtn.classList.add('active');
           scoreList.innerHTML = '';
           scoresToshow.forEach((score) => {
             scoreList.innerHTML += `<li class="score"> ${score.user}: ${score.score}</li>`;
